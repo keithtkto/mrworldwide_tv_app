@@ -1,11 +1,12 @@
 class CreateVideos < ActiveRecord::Migration
   def change
     create_table :videos do |t|
-      t.string :embeded_url
+      t.string :embed_url
       t.string :title
       t.string :album
       t.string :featured_artists
-      t.date :release_on
+      t.date :released_on
+      t.string :tags
 
       t.timestamps null: false
     end

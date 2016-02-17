@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Video.delete_all
+
+Video.create(
+  id: 1,
+  embed_url:        "EPo5wWmKEaI",
+  title:            "Give Me Everything",
+  album:            "Planet Pit",
+  featured_artists: "Ne-Yo, Afrojack, Nayer",
+  released_on:      Date.parse("06-05-2011"),
+  tags:             "#dale"
+  )
