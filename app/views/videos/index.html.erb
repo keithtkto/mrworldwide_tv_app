@@ -1,14 +1,8 @@
-
-
-<header>
-  <h1>Mr. Worldwide TV</h1>
-  <h3>Dale!</h3>
-</header>
 <main>
   <% @videos.each do |video| %>
     <article>
       <h4> <%= link_to video.title, video.youtube_link %> </h4>
-      <%=raw video.embed %>
+      <iframe width="560" height="315" src=<%= video.embed %> frameborder="0" allowfullscreen></iframe>
     </article>
   <% end %>
 </main>
