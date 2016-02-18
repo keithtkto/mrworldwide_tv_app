@@ -1,8 +1,12 @@
 <main>
-  <% @videos.each do |video| %>
+  <% @videos.order("created_at desc").each do |video| %>
     <article>
       <h4> <%= link_to video.title, video.youtube_link %> </h4>
       <iframe width="560" height="315" src=<%= video.embed %> frameborder="0" allowfullscreen></iframe>
+      <br>
+      <%= link_to "Only this video", video %>
+      <%= link_to "Edit this Vid", edit_path(video) %>
+      <%= link_to "Yeah!! no more Pitbull", video, method: :get, data: {confirm: "Just to be sure"} %>
     </article>
   <% end %>
 </main>

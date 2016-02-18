@@ -12,5 +12,9 @@ class Video < ActiveRecord::Base
     "https://www.youtube.com/embed/#{self.embed_url}"
   end
 
+  def order
+
+  end
+
 end
 

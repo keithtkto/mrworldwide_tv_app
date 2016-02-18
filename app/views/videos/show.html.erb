@@ -1,0 +1,11 @@
+
+    <article>
+      <h4> <%= link_to @video.title, @video.youtube_link %> </h4>
+      <iframe width="560" height="315" src=<%= @video.embed %> frameborder="0" allowfullscreen></iframe>
+      <br>
+      <%= link_to "To the top of the world", videos_path %>
+      <%= link_to "Edit this Vid", edit_path %>
+
+      <%= link_to "Kill this Pit", video_path, method: :delete, data: {confirm: "Hell yeah!"} %>
+
+    </article>
